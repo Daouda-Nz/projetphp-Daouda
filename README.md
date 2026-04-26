@@ -51,5 +51,5 @@ http://localhost/Projetphp-Daouda/index.php
 
 ## 👨‍🎓 Auteur
 
-Étudiant L2 Informatique – ISM
+DAOUDA DIAKHATE Étudiant L2 IAGE A – ISM
 
