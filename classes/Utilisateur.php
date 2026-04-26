@@ -1,7 +1,7 @@
 <?php
+require_once _DIR_ . "/Interfaces.php";
+require_once _DIR_ . "/Personne.php";
 
-require_once "Interfaces.php";
-require_once "Personne.php";
 abstract class Utilisateur extends Personne implements Authentifiable, Affichable {
 
     protected $login;

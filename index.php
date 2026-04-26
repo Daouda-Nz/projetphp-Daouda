@@ -1,5 +1,7 @@
 <?php
 
+require_once "classes/Utilisateur.php";  
+require_once "classes/Personne.php";   
 require_once "classes/Client.php";
 require_once "classes/Employe.php";
 require_once "classes/Administrateur.php";

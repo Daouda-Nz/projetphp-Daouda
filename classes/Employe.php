@@ -1,6 +1,6 @@
 <?php
-require_once "Interfaces.php";
-require_once "Utilisateur.php";
+require_once _DIR_ . "/Interfaces.php";
+require_once _DIR_ . "/Personne.php";
 
 class Employe extends Utilisateur {
 
