@@ -1,5 +1,5 @@
 <?php
-
+require_once "Interfaces.php";
 class Personne {
     protected $id;
     protected $nom;
