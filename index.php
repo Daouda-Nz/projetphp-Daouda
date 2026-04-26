@@ -6,7 +6,6 @@ require_once "classes/Client.php";
 require_once "classes/Employe.php";
 require_once "classes/Administrateur.php";
 
-// TEST
 $client = new Client(1, "Ali", "ali@mail.com", "ali123", "pass", "premium");
 $employe = new Employe(2, "Jean", "jean@mail.com", "jean", "pass", 2000);
 $admin = new Administrateur(3, "Admin", "admin@mail.com", "admin", "pass");
@@ -15,60 +14,68 @@ $admin = new Administrateur(3, "Admin", "admin@mail.com", "admin", "pass");
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Gestion des utilisateurs</title>
+<meta charset="UTF-8">
+<title>Gestion des utilisateurs</title>
+
 <style>
     body {
-        font-family: Arial, sans-serif;
-        background: linear-gradient(to right, #4facfe, #00f2fe);
-        padding: 20px;
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
     }
 
-    h2 {
+    h1 {
         text-align: center;
-        color: white;
-        margin-bottom: 30px;
+        padding: 20px;
     }
 
     .container {
-        max-width: 700px;
-        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
     }
 
     .card {
-        background: white;
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
         padding: 20px;
-        margin: 15px 0;
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        transition: transform 0.2s;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        transition: 0.3s;
     }
 
     .card:hover {
-        transform: scale(1.03);
+        transform: translateY(-5px) scale(1.02);
     }
 
     .title {
-        font-weight: bold;
+        font-size: 20px;
         margin-bottom: 10px;
-        color: #007bff;
-        font-size: 18px;
+        font-weight: bold;
     }
 
+    .client { border-left: 5px solid #00ffcc; }
+    .employe { border-left: 5px solid #ffd700; }
+    .admin { border-left: 5px solid #ff4d4d; }
+    .stats { border-left: 5px solid #00bfff; }
+
     .result {
-        color: #333;
+        font-size: 14px;
+        line-height: 1.6;
     }
 </style>
 </head>
 
 <body>
 
-<h2>Gestion des utilisateurs</h2>
+<h1>🚀 Gestion des utilisateurs</h1>
 
 <div class="container">
 
-    <div class="card">
-        <div class="title">Client</div>
+    <div class="card client">
+        <div class="title">👤 Client</div>
         <div class="result">
             <?php
             echo $client->afficher() . "<br>";
@@ -77,8 +84,8 @@ $admin = new Administrateur(3, "Admin", "admin@mail.com", "admin", "pass");
         </div>
     </div>
 
-    <div class="card">
-        <div class="title">Employé</div>
+    <div class="card employe">
+        <div class="title">💼 Employé</div>
         <div class="result">
             <?php
             echo $employe->afficher() . "<br>";
@@ -87,8 +94,8 @@ $admin = new Administrateur(3, "Admin", "admin@mail.com", "admin", "pass");
         </div>
     </div>
 
-    <div class="card">
-        <div class="title">Administrateur</div>
+    <div class="card admin">
+        <div class="title">🛠 Administrateur</div>
         <div class="result">
             <?php
             echo $admin->afficher() . "<br>";
@@ -97,8 +104,8 @@ $admin = new Administrateur(3, "Admin", "admin@mail.com", "admin", "pass");
         </div>
     </div>
 
-    <div class="card">
-        <div class="title">Statistiques</div>
+    <div class="card stats">
+        <div class="title">📊 Statistiques</div>
         <div class="result">
             <?php
             echo "Nombre utilisateurs: " . Utilisateur::afficherNombre();
