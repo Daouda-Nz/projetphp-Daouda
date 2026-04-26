@@ -1,6 +1,4 @@
 <?php
-require_once __DIR__ . "/Interfaces.php";
-require_once __DIR__ . "/Personne.php";
 
 abstract class Utilisateur extends Personne implements Authentifiable, Affichable {
 
