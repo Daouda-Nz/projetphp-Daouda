@@ -1,4 +1,5 @@
 <?php
+echo "<h2>Gestion des utilisateurs</h2>";
 
 require_once "classes/Interfaces.php";
 require_once "classes/Personne.php";
